@@ -32,7 +32,7 @@ A primeira etapa consistiu no reconhecimento do alvo. Utilizei o `enum4linux` pa
 enum4linux -a 192.168.56.103
 ```
 
-> 📸 *Evidência de Enumeração — inserir screenshot aqui*
+> 📸 ![Evidência de Enumeração](evidencia_enum4linux.png)
 
 ---
 
@@ -45,7 +45,7 @@ Com a lista de usuários em mãos, utilizei o Medusa para realizar um ataque de 
 medusa -h 192.168.56.103 -U users.txt -P pass.txt -M ftp
 ```
 
-> 📸 *Evidência de Sucesso no FTP — inserir screenshot aqui*
+> 📸 ![Evidência de Sucesso no FTP](evidencia_ftp.png)
 
 ---
 
@@ -61,7 +61,7 @@ medusa -h 192.168.56.103 -U users.txt -P pass.txt -M http \
   -m 'FAIL=Login failed'
 ```
 
-> 📸 *Evidência de Sucesso no DVWA — inserir screenshot aqui*
+> 📸 ![Evidência de Sucesso no DVWA](print-kali.png)
 
 ---
 
