@@ -13,7 +13,7 @@ Este projeto documenta uma auditoria de segurança prática realizada em ambient
 
 ---
 
-## 🛠️ Desenvolvimento do Projeto
+## Desenvolvimento do Projeto
 
 ### 1. Preparação do Ambiente e Wordlists
 Para simular o ataque, foram criadas wordlists personalizadas de usuários e senhas comuns utilizando comandos de shell:
