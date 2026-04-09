@@ -1,4 +1,4 @@
-# 🛡️ Simulação de Ataque de Força Bruta com Medusa e Kali Linux
+#### ☕ Simulação de Ataque de Força Bruta com Medusa e Kali Linux
 
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Metasploitable](https://img.shields.io/badge/Metasploitable_2-E34F26?style=for-the-badge)
@@ -9,7 +9,7 @@ Este projeto documenta uma auditoria de segurança prática realizada em ambient
 
 ---
 
-## 🚀 Tecnologias e Ferramentas Utilizadas
+#### ☕ Tecnologias e Ferramentas Utilizadas
 
 | Categoria | Tecnologia |
 |---|---|
@@ -21,9 +21,9 @@ Este projeto documenta uma auditoria de segurança prática realizada em ambient
 
 ---
 
-## 🛠️ Desenvolvimento do Projeto
+#### ☕ Desenvolvimento do Projeto
 
-### 1. Enumeração de Usuários (Protocolo SMB)
+#### 1. Enumeração de Usuários (Protocolo SMB)
 
 A primeira etapa consistiu no reconhecimento do alvo. Utilizei o `enum4linux` para extrair informações do serviço SMB, o que permitiu identificar usuários válidos e estruturar uma wordlist assertiva para os ataques seguintes.
 
@@ -32,11 +32,11 @@ A primeira etapa consistiu no reconhecimento do alvo. Utilizei o `enum4linux` pa
 enum4linux -a 192.168.56.103
 ```
 
-> 📸 ![Evidência de Enumeração](evidencia_enum4linux.png)
+> 🤎 ![Evidência de Enumeração](evidencia_enum4linux.png)
 
 ---
 
-### 2. Ataque de Força Bruta em FTP
+#### 2. Ataque de Força Bruta em FTP
 
 Com a lista de usuários em mãos, utilizei o Medusa para realizar um ataque de dicionário contra o serviço FTP. O ataque foi bem-sucedido ao identificar credenciais válidas.
 
@@ -45,11 +45,11 @@ Com a lista de usuários em mãos, utilizei o Medusa para realizar um ataque de 
 medusa -h 192.168.56.103 -U users.txt -P pass.txt -M ftp
 ```
 
-> 📸 ![Evidência de Sucesso no FTP](evidencia_ftp.png)
+> 🤎 ![Evidência de Sucesso no FTP](evidencia_ftp.png)
 
 ---
 
-### 3. Ataque em Formulário Web (DVWA)
+#### 3. Ataque em Formulário Web (DVWA)
 
 O cenário mais complexo envolveu a automação de tentativas de login em um formulário HTTP POST. Utilizei os parâmetros do Medusa para identificar o campo de usuário, senha e a mensagem de erro retornada pela aplicação para validar o sucesso.
 
@@ -61,11 +61,11 @@ medusa -h 192.168.56.103 -U users.txt -P pass.txt -M http \
   -m 'FAIL=Login failed'
 ```
 
-> 📸 ![Evidência de Sucesso no DVWA](print-kali.png)
+> ☕ ![Evidência de Sucesso no DVWA](print-kali.png)
 
 ---
 
-## 🛡️ Medidas de Prevenção e Mitigação
+#### ☕ Medidas de Prevenção e Mitigação
 
 Para proteger infraestruturas contra os ataques simulados neste projeto, as seguintes boas práticas são recomendadas:
 
@@ -75,13 +75,6 @@ Para proteger infraestruturas contra os ataques simulados neste projeto, as segu
 | 2 | **Account Lockout** | Bloquear temporariamente o acesso após um número determinado de tentativas falhas. |
 | 3 | **MFA (Autenticação de Dois Fatores)** | Camada extra de segurança que impede o acesso mesmo com a senha comprometida. |
 | 4 | **Monitoramento e IPS** | Sistemas de detecção e prevenção de intrusão que bloqueiam IPs com comportamento suspeito. |
-
----
-
-## 🎓 Sobre a Autora
-
-**Bianca Borges Da Silva** — Estudante de Ciência da Computação e Embaixadora Universitária da DIO.  
-O foco do estudo é consolidar conhecimentos práticos em segurança ofensiva e defesa cibernética.
 
 ---
 
